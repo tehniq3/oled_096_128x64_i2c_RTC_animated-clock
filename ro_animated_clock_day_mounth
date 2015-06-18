@@ -653,7 +653,8 @@ if ((now - prev > interval)) { //Determine whether to start a time and screen up
     break;
     
      case 10: //Alarm enable/disable
-      if(flash){display.drawRect(66,0,18,8,WHITE);} //Display rectangle cursor every other display update (5Hz blink)
+     // if(flash){display.drawRect(66,0,18,8,WHITE);} //Display rectangle cursor every other display update (5Hz blink)
+      if(flash){display.drawRect(63,0,16,8,WHITE);} //Display rectangle cursor every other display update (5Hz blink)
       if(!digitalRead(9) && (!flash)){ //Update setting at 5Hz rate if button held down
         if(wake_SET){wake_SET = 0;}else{wake_SET = 1;} //Toggle alarm on/of variable at 5 Hz
       }
